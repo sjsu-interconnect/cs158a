@@ -1,0 +1,26 @@
+networks:
+  testnet:
+    driver: bridge
+
+services:
+  node1:
+    image: alpine
+    container_name: node1
+    command: sleep infinity
+    networks:
+      - testnet
+
+  node2:
+    image: alpine
+    container_name: node2
+    command: sleep infinity
+    networks:
+      - testnet
+
+  node3:
+    image: alpine
+    container_name: node3
+    command: sleep infinity
+    networks:
+      - testnet
+
