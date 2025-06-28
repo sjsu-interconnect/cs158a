@@ -4,7 +4,7 @@
    *  [Install Multipass](https://canonical.com/multipass/install)
 2. Create a Multipass VM (Ubuntu Noble 24.04 (LTS))
 ```bash
-multipass launch noble --name docker-vm --cpus 2 --mem 4G --disk 50G
+multipass launch noble --name docker-vm --cpus 2 --mem 4G --disk 20G
 ```
 3. Install Docker on a Multipass VM
    1. [Uninstall old versions](https://docs.docker.com/engine/install/ubuntu/#uninstall-old-versions)
@@ -36,6 +36,10 @@ docker exec node1 -it sh
 # show network info
 ip address
 ```
+```bash
+# To remove a previous container
+docker rm <name of the container>
+```
 
 # Demo 1
 - See [demo1/docker-compose.yml](../demo1/docker-compose.yml)
@@ -43,3 +47,8 @@ ip address
 - Create a network ```testnet```
 - Check IP addresses of all nodes
 - Send ping to each other
+
+
+<!--where are they getting IP?-->
+<!--DNS??-->
+<!--nginx web port exposure-->
